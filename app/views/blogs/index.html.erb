@@ -1,0 +1,10 @@
+<h1>All Blogs</h1>
+ <% @blogs.each do |blog| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to blog.title, blog %>
+       </h4>
+     </div>
+   </div>
+ <% end %>
