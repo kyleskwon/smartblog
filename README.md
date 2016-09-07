@@ -1,0 +1,1 @@
+## SmartBlog: a simple blogging application that allows a user to add a blog, posts to the blog, and users to comment
