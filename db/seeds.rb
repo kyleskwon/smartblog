@@ -12,13 +12,13 @@ blogs = Blog.all
 
 # Create Comments
 10.times do
-	Post.create!(
-		blog: blogs.sample,
-		title:  RandomData.random_sentence,
-		description:   RandomData.random_paragraph,
-		content: RandomData.random_paragraph,
-		author: RandomData.random_name
-	)
+	blogs.each do |blog|
+		Post.create!(
+			title:  RandomData.random_sentence,
+			description:   RandomData.random_paragraph,
+			content: RandomData.random_paragraph,
+			author: RandomData.random_name
+	end
 end
 posts = Post.all
 

@@ -1,0 +1,15 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.description %></p>
+<p><%= @post.content %></p>
+<p><%= @post.author %></p>
+
+<h1>All Comments</h1>
+ <% @post.comments.each do |comment| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to comment.title, comment %>
+       </h4>
+     </div>
+   </div>
+ <% end %>

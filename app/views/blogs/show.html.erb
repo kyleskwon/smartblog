@@ -1,2 +1,14 @@
-<h1>Blogs#show</h1>
-<p>Find me in app/views/blogs/show.html.erb</p>
+<h1><%= @blog.title %></h1>
+<p><%= @blog.description %></p>
+<p><%= @blog.owner %></p>
+
+<h1>All Posts</h1>
+ <% @blog.posts.each do |post| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to post.title, post %>
+       </h4>
+     </div>
+   </div>
+ <% end %>
